@@ -1,0 +1,30 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://simplur-next-app-dev.vercel.app/');
+  await page.getByPlaceholder('Email', { exact: true }).click();
+  await page.getByPlaceholder('Email', { exact: true }).fill('umrnwz@gmail.com');
+  await page.getByRole('button', { name: 'Submit' }).click();
+  await page.locator('#printmoda-studio-fabric-printer').getByRole('button', { name: 'Add to cart' }).click();
+  await page.getByRole('link', { name: 'Added! Go to Cart?' }).click();
+  await page.getByRole('link', { name: 'Checkout' }).click();
+  await page.getByPlaceholder('First Name').click();
+  await page.getByPlaceholder('First Name').fill('SewingMP');
+  await page.getByPlaceholder('Last Name').click();
+  await page.getByPlaceholder('Last Name').fill('Testtwo');
+  await page.getByPlaceholder('House number and street name').click();
+  await page.getByPlaceholder('House number and street name').fill('4125 Winward Plz');
+  await page.getByPlaceholder('City').click();
+  await page.getByPlaceholder('City').fill('Alpharetta');
+  await page.getByLabel('Select your state').selectOption('Georgia');
+  await page.getByLabel('Select your state').click();
+  await page.getByPlaceholder('Zip Code').click();
+  await page.getByPlaceholder('Zip Code').fill('30005');
+  await page.getByPlaceholder('Phone').click();
+  await page.getByPlaceholder('Phone').fill('33980263');
+  await page.getByPlaceholder('Phone').press('Tab');
+  await page.getByRole('button', { name: 'Next' }).click();
+  await page.getByRole('button', { name: 'Next' }).click();
+  await page.getByRole('radio', { name: 'synchrony' }).check();
+  await page.getByText('You agree to the terms and').click();
+});
