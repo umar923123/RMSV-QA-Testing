@@ -10,6 +10,15 @@ This repository contains automated test cases developed for the RMSV project und
    ```bash
    git clone https://github.com/umar923123/RMSV-QA-Testing.git
 
+2. Navigate to the project directory:
+   ```bash
+   cd rmsv-automated-testing
+
+3. Install the required dependencies:
+   ```bash
+   npm install
+
+
 
 ## Test Cases
 1. **Synchrony.Payment.spec.js**
