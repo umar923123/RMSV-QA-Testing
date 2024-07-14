@@ -18,8 +18,6 @@ This repository contains automated test cases developed for the RMSV project und
    ```bash
    npm install
 
-
-
 ## Test Cases
 1. **Synchrony.Payment.spec.js**
 2. **Cart.checkout.function.spec.js**
